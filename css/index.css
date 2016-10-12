@@ -1,0 +1,168 @@
+
+html{
+	height: 100%;
+}
+
+body{
+	margin: 0;
+	height: 100%;
+	/*background:radial-gradient(lightgreen,grey,black);*/
+	background-image: url(../music/pic6.jpg);
+	background-size: 100% 100%;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+@keyframes rounding{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+#hole{
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #c4d7bb;
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	border-radius: 50%;
+	border: 5px silver solid;
+}
+
+#cd{
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	background-size: 100% 100%;
+	border: solid 2px black;
+	position: relative;
+	left: 560px;
+	top: 220px;
+	transition: left 0.4s linear;
+	animation: rounding 10s linear infinite;
+}
+
+#cd:hover{
+	left: 160px;
+	transition: left 0.4s linear;
+}
+
+#list-box{
+	width: 150px;
+	height: 600px;
+	border: 2px solid #85f289;
+	position: absolute;
+	left: 10vw;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 20px;
+	padding: 40px;
+	color: blanchedalmond;
+}
+
+#list-box li{
+	margin-top: 20px;
+}
+
+#main-box{
+	width: 600px;
+	height: 600px;
+	box-shadow: 0px 0px 5px #85f289;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#back{
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 50%;
+	overflow: hidden;
+	background-size: 100% 100%;
+	animation: rounding 10s linear infinite;
+}
+
+#lyric-box{
+	width: 617px;
+	height: 40%;
+	border-bottom: 2px solid green;
+	/*background: linear-gradient(white,#9ff868);*/
+	padding: 20px;
+	text-align: center;
+	overflow: auto;
+	color: white;
+}
+
+#progress-box{
+	height: 30%;
+	border-top: 2px solid #eefee4;
+	border-bottom: 2px solid #008000;
+	/*background-color: #9FF868;*/
+}
+
+#control-box{
+	height: 30%;
+	border-top: 2px solid #EEFEE4;
+	/*background-color: #68ce6b;*/
+}
+
+#control-box span{
+	font-size: 66px;
+	cursor: pointer;
+}
+
+#control-box span:hover{
+	text-shadow: 0 0 30px pink;
+}
+
+#control-box div{
+	position: relative;
+	top: 50%;
+	transform: translate(0,-50%);
+	text-align: center;
+}
+
+progress{
+	width: calc(100% - 20px);
+	position: relative;
+	top: 50%;
+	left: 10px;
+}
+
+#progress-label{
+	position: relative;
+	top: 50%;
+	text-align: center;
+}
+
+#lyric-box p{
+	margin: 5px 0;
+	cursor: pointer;
+	transition: font-size 0.3s linear;
+}
+
+.highlight-line{
+	font-size: 1.4em;
+	color: coral;
+}
